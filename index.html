@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toast Notification Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+</head>
+
+<body class="p-6">
+  <div class="max-w-screen-sm mx-auto bg-gray-200 p-8 rounded-lg">
+    <h1 class="text-3xl font-semibold mb-6">Toast Notification Demo</h1>
+
+    <div class="mb-4">
+      <label for="message" class="block text-lg mb-2">Message: </label>
+      <input type="text" id="message" class="px-4 py-2 border border-gray-300 rounded w-full" />
+    </div>
+
+    <div class="mb-4">
+      <label for="type" class="block text-lg mb-2">Type: </label>
+      <select id="type" class="px-4 py-2 border border-gray-300 rounded w-full">
+        <option value="success">Success</option>
+        <option value="error">Error</option>
+        <option value="info">Info</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="horizontal-position" class="block text-lg mb-2">Horizontal Position: </label>
+      <select id="horizontal-position" class="px-4 py-2 border border-gray-300 rounded w-full">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="vertical-position" class="block text-lg mb-2">Vertical Position: </label>
+      <select id="vertical-position" class="px-4 py-2 border border-gray-300 rounded w-full">
+        <option value="top">Top</option>
+        <option value="bottom">Bottom</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="duration" class="block text-lg mb-2">Duration (seconds): </label>
+      <input type="range" id="duration" min="1" max="10" value="5" class="w-full mb-2" />
+      <span id="duration-output" class="text-lg">5</span>s
+    </div>
+
+    <div>
+      <button id="show-toast" class="px-4 py-2 bg-blue-500 text-white rounded" disabled>Show Toast</button>
+    </div>
+
+    <!-- Toast Containers -->
+    <div class="toast-container fixed top-0 left-0 flex flex-col gap-4 p-4" id="tc-left-top"></div>
+    <div class="toast-container fixed bottom-0 left-0 flex flex-col gap-4 p-4" id="tc-left-bottom"></div>
+    <div class="toast-container fixed top-0 right-0 flex flex-col gap-4 p-4" id="tc-right-top"></div>
+    <div class="toast-container fixed bottom-0 right-0 flex flex-col gap-4 p-4" id="tc-right-bottom"></div>
+
+    <!-- Toast Template -->
+    <template id="toast-template">
+      <div class="toast bg-gray-800 text-white px-4 py-2 rounded flex items-center gap-6 justify-between shadow-lg min-w-[200px]">
+        <span class="toast-message"></span>
+        <button class="remove text-white text-3xl">&times;</button>
+      </div>
+    </template>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
