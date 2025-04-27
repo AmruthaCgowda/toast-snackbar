@@ -3,8 +3,7 @@
 A simple web app demonstrating toast notifications with customizable positions, types, and durations using HTML, Tailwind CSS, and vanilla JavaScript.
 
 ## 🔗 Live Demo  
-<a href="https://amruthacgowda.github.io/toast-snackbar" target="_blank">Toast Notification Demo</a>  
-*(Replace with your actual deployment link!)*
+<a href="https://amruthacgowda.github.io/toast-snackbar" target="_blank">Toast Notification Demo</a>
 
 ## 🛠️ Technologies Used
 
